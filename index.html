@@ -82,7 +82,7 @@
             <h2 class="font-playfair text-3xl font-semibold text-wedding-cream mb-4 drop-shadow-md leading-tight">НЭМЭГТ Овгийн</h2>
             <h2 class="font-playfair text-xl text-wedding-goldLight mb-6 drop-shadow-md italic">Дамаагийн Цэвээний үр сад нарын ургийн танилцах өдөрлөг</h2>
             
-            <p class="text-[11px] text-wedding-goldLight/70 tracking-wider uppercase mb-8 font-light">2025 оны 08 сарын 01</p>
+            <p class="text-[11px] text-wedding-goldLight/70 tracking-wider uppercase mb-8 font-light">2026 оны 08 сарын 01</p>
             
             <button id="btn-open" class="pulse-btn w-full py-4 bg-wedding-gold text-wedding-cream font-semibold text-xs tracking-[0.2em] rounded-xl transition duration-300 shadow-lg cursor-pointer uppercase border border-wedding-goldLight/50 hover:bg-wedding-goldLight hover:text-wedding-navy">
                 Урилга нээх
@@ -154,7 +154,7 @@
 
             <!-- Хугацаа & Байршил -->
             <div class="my-8 py-6 border-y border-wedding-gold/40 bg-wedding-gold/10 relative rounded-xl">
-                <div class="font-cinzel text-lg font-bold tracking-[2px] text-wedding-navy mb-2">2025 . 08 . 01</div>
+                <div class="font-cinzel text-lg font-bold tracking-[2px] text-wedding-navy mb-2">2026 . 08 . 01</div>
                 <div class="text-[12px] text-wedding-charcoal font-medium tracking-wider mb-1">БААСАН ГАРАГ</div>
                 <div class="flex justify-center items-center gap-4 text-[11px] text-stone-600 mt-4">
                     <div class="text-center">
@@ -459,8 +459,8 @@
 
         // Цаг тоологчийн логик
         function initCountdown() {
-            // Ургийн баяр болох огноо: 2025 оны 8 сарын 1, 09:00
-            const weddingDate = new Date("Aug 1, 2025 09:00:00").getTime();
+            // Ургийн баяр болох огноо: 2026 оны 8 сарын 1, 09:00
+            const weddingDate = new Date("Aug 1, 2026 09:00:00").getTime();
 
             const timer = setInterval(function() {
                 const now = new Date().getTime();
@@ -938,7 +938,7 @@
         };
         
         document.getElementById("btn-pin-verify").onclick = () => {
-            if (document.getElementById("adminPin").value === "2025") {
+            if (document.getElementById("adminPin").value === "2026") {
                 document.getElementById("pinModal").style.display = "none";
                 document.getElementById("mainContent").classList.remove("active");
                 document.getElementById("adminDashboard").classList.add("active");
