@@ -13,7 +13,6 @@
                 extend: {
                     colors: {
                         wedding: { 
-                            /* Зөөлөн, дулаахан уламжлалт өнгөнүүд (Нэршлийг хуучнаар үлдээсэн нь бусад кодыг эвдэхгүй байх зорилготой) */
                             navy: '#5c3a21',     /* Бор хүрэн */
                             gold: '#c97a3a',     /* Дулаан зэс/шаргал */
                             goldLight: '#f5d5b3',
@@ -55,7 +54,6 @@
 
         .glass-panel { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(201, 122, 58, 0.2); }
         
-        /* Билгэдэл хээ угалзны дэвсгэр хэв маяг */
         .pattern-bg {
             background-color: transparent;
             background-image: radial-gradient(rgba(201, 122, 58, 0.15) 2px, transparent 2px);
@@ -66,13 +64,11 @@
 <body class="font-montserrat text-wedding-charcoal bg-zinc-200 overflow-x-hidden selection:bg-wedding-gold selection:text-white">
 
     <audio id="bgMusic" loop preload="auto">
-        <!-- Уламжлалт эсвэл зөөлөн ая байвал тохиромжтой -->
         <source src="https://assets.mixkit.co/music/preview/mixkit-wedding-piano-and-strings-107.mp3" type="audio/mpeg">
     </audio>
 
     <!-- Хаалга / Эхлэх дэлгэц -->
     <div id="doorOverlay" class="view-section active fixed inset-0 z-50 flex-col items-center justify-center bg-wedding-navy text-wedding-cream transition-opacity duration-1000 px-6 text-center">
-        <!-- Арын хээ -->
         <div class="absolute inset-0 pattern-bg opacity-30"></div>
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-wedding-navy/70 to-wedding-navy"></div>
         
@@ -95,16 +91,16 @@
         <canvas id="starCanvas"></canvas>
         <div class="absolute inset-0 pattern-bg opacity-20 pointer-events-none z-0"></div>
         
-        <!-- Хөгжим удирдах товч -->
+        <!-- Хөгжим товч -->
         <button id="btn-music" class="fixed top-4 right-4 md:right-[calc(50%-220px)] z-40 p-3 bg-white/70 backdrop-blur-md rounded-full shadow-lg text-wedding-gold hover:text-wedding-goldDark transition border border-wedding-gold/30 cursor-pointer text-xl hidden">
             <span id="musicOn" class="drop-shadow-sm">🎵</span>
             <span id="musicOff" class="hidden grayscale opacity-60">🔇</span>
         </button>
 
-        <!-- Толгой хэсэг: Зураг -->
+        <!-- Толгой зураг -->
         <div class="w-full relative h-[50vh] min-h-[350px]">
-            <img src="https://placehold.co/480x600/5c3a21/c97a3a?font=playfair&text=Ургийн+Баяр" alt="Ургийн баяр" class="w-full h-full object-cover rounded-b-[40px] shadow-sm">
-            <div class="absolute inset-0 bg-gradient-to-t from-wedding-cream via-wedding-cream/30 to-black/40 rounded-b-[40px]"></div>
+            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=800&auto=format&fit=crop" alt="Ургийн баяр" class="w-full h-full object-cover rounded-b-[40px] shadow-sm">
+            <div class="absolute inset-0 bg-gradient-to-t from-wedding-cream via-wedding-cream/30 to-black/50 rounded-b-[40px]"></div>
             
             <div class="absolute bottom-6 left-0 w-full text-center px-4">
                 <p class="text-[10px] tracking-[4px] text-wedding-gold font-cinzel uppercase mb-2">Ургийн баярын урилга</p>
@@ -116,7 +112,7 @@
             <span class="text-wedding-gold text-3xl tracking-widest">❖</span>
         </div>
 
-        <!-- Урилгын текст -->
+        <!-- Урилгын эх текст -->
         <div class="px-8 text-center w-full z-10 relative">
             <h2 class="font-playfair text-xl font-semibold text-wedding-navy my-4 leading-snug">
                 Ураг төрлийн хэлхээ холбоогоо <br><span class="text-wedding-gold italic">улам бэхжүүлэх ерөөлтэй өдөр</span>
@@ -125,8 +121,41 @@
                 Элэг нэгт ахан дүүсээрээ хуран цугларч, НЭМЭГТ Овгийн Дамаагийн Цэвээний үр сад нарын ургийн танилцах өдөрлөг, баярын арга хэмжээнд хүрэлцэн ирэхийг өргөнөөр урьж байна.
             </div>
 
+            <!-- УРГИЙН МОДНЫ ХЭСЭГ -->
+            <div class="my-8 bg-white/90 backdrop-blur-sm p-6 rounded-3xl border border-wedding-gold/30 shadow-md">
+                <div class="text-2xl mb-1 text-wedding-gold">🌳</div>
+                <div class="text-[10px] tracking-[3px] text-wedding-goldDark font-cinzel uppercase mb-1 font-bold">Угийн бичиг</div>
+                <h3 class="font-playfair text-lg font-bold text-wedding-navy mb-4">Ургийн Мод</h3>
+
+                <!-- Өвөг дээдэс -->
+                <div class="flex flex-col items-center mb-4">
+                    <div class="bg-wedding-navy text-wedding-goldLight px-4 py-2 rounded-xl text-xs font-bold shadow-md border border-wedding-gold">
+                        Дамаагийн Цэвээн
+                    </div>
+                    <div class="w-[2px] h-6 bg-wedding-gold/50 my-1"></div>
+                    <div class="text-[10px] text-stone-400 italic">Үндсэн салбарууд</div>
+                </div>
+
+                <!-- Салбарууд -->
+                <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                    <div class="p-2.5 bg-wedding-blush/60 rounded-xl border border-wedding-gold/30 flex flex-col items-center">
+                        <span class="font-bold text-wedding-navy text-[11px] block">Том салбар</span>
+                        <span class="text-[9px] text-stone-500 mt-0.5">Ууган үр сад</span>
+                    </div>
+                    <div class="p-2.5 bg-wedding-blush/60 rounded-xl border border-wedding-gold/30 flex flex-col items-center">
+                        <span class="font-bold text-wedding-navy text-[11px] block">Дундын салбар</span>
+                        <span class="text-[9px] text-stone-500 mt-0.5">Дэд үр сад</span>
+                    </div>
+                    <div class="p-2.5 bg-wedding-blush/60 rounded-xl border border-wedding-gold/30 flex flex-col items-center">
+                        <span class="font-bold text-wedding-navy text-[11px] block">Отгон салбар</span>
+                        <span class="text-[9px] text-stone-500 mt-0.5">Бага үр сад</span>
+                    </div>
+                </div>
+                <p class="text-[10px] text-stone-400 mt-4 leading-relaxed">Та доорх бүртгэлийг бөглөхдөө ургийн модон дахь өөрийн харьяалагдах салбараа сонгон гэр бүлийн зургаа оруулаарай.</p>
+            </div>
+
             <!-- Цаг тоологч -->
-            <div class="my-10 bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-wedding-gold/30 shadow-sm relative overflow-hidden">
+            <div class="my-8 bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-wedding-gold/30 shadow-sm relative overflow-hidden">
                 <div class="absolute top-0 right-0 p-2 opacity-10 text-4xl">⏳</div>
                 <div class="text-[10px] tracking-[3px] text-wedding-navy font-cinzel uppercase mb-4 font-semibold">Баяр болох хүртэл</div>
                 <div class="flex justify-center gap-4 text-wedding-navy" id="countdown-container">
@@ -155,7 +184,7 @@
             <!-- Хугацаа & Байршил -->
             <div class="my-8 py-6 border-y border-wedding-gold/40 bg-wedding-gold/10 relative rounded-xl">
                 <div class="font-cinzel text-lg font-bold tracking-[2px] text-wedding-navy mb-2">2026 . 08 . 01</div>
-                <div class="text-[12px] text-wedding-charcoal font-medium tracking-wider mb-1">БААСАН ГАРАГ</div>
+                <div class="text-[12px] text-wedding-charcoal font-medium tracking-wider mb-1">БЯМБА ГАРАГ</div>
                 <div class="flex justify-center items-center gap-4 text-[11px] text-stone-600 mt-4">
                     <div class="text-center">
                         <span class="text-wedding-goldDark font-bold text-base">09:00</span><br>Эхлэх цаг
@@ -172,12 +201,12 @@
         </div>
 
         <div class="w-[85%] mb-12 flex flex-col gap-3 z-10 relative">
-            <a href="https://maps.google.com/?q=Shangri-La+Hotel+Ulaanbaatar" target="_blank" class="w-full py-4 bg-wedding-navy hover:bg-wedding-charcoal text-wedding-goldLight font-semibold text-[11px] tracking-[2px] rounded-xl transition shadow-md flex items-center justify-center gap-2 cursor-pointer uppercase border border-wedding-navy">
+            <a href="https://maps.google.com/?q=Даланзадгад+Өмнөговь" target="_blank" class="w-full py-4 bg-wedding-navy hover:bg-wedding-charcoal text-wedding-goldLight font-semibold text-[11px] tracking-[2px] rounded-xl transition shadow-md flex items-center justify-center gap-2 cursor-pointer uppercase border border-wedding-navy">
                 Газрын зурагт харах
             </a>
         </div>
 
-        <!-- ШИНЭ ХЭСЭГ: Хөтөлбөр -->
+        <!-- Хөтөлбөр -->
         <div class="w-[90%] my-8 z-10 relative">
             <div class="text-center mb-6">
                 <div class="text-[10px] tracking-[4px] text-stone-400 font-cinzel uppercase mb-1">Цагийн хуваарь</div>
@@ -215,7 +244,7 @@
             </div>
         </div>
 
-        <!-- RSVP / Ирц бүртгэл -->
+        <!-- RSVP Бүртгэл -->
         <div class="w-[90%] bg-wedding-navy text-wedding-cream p-7 rounded-3xl my-6 relative shadow-[0_10px_30px_rgba(92,58,33,0.3)] z-10">
             <div class="absolute inset-0 pattern-bg opacity-10 rounded-3xl pointer-events-none"></div>
             <div class="relative z-10">
@@ -229,6 +258,24 @@
                         <label class="block text-[10px] text-wedding-goldLight/70 tracking-wider mb-1 uppercase font-medium">Таны нэр / Гэр бүл</label>
                         <input type="text" id="rsvpName" required placeholder="Нэрээ эсвэл гэр бүлийн нэрээ бичнэ үү" class="w-full px-4 py-3 rounded-xl bg-black/20 text-white border border-wedding-gold/30 focus:outline-none focus:border-wedding-goldLight focus:bg-black/40 text-xs transition placeholder:text-stone-400">
                     </div>
+
+                    <!-- Ургийн салбар сонголт -->
+                    <div>
+                        <label class="block text-[10px] text-wedding-goldLight/70 tracking-wider mb-1 uppercase font-medium">Ургийн модны салбар</label>
+                        <select id="rsvpBranch" class="w-full px-3 py-3 rounded-xl bg-black/20 text-white border border-wedding-gold/30 focus:outline-none focus:border-wedding-goldLight text-xs transition">
+                            <option value="Том салбар (Ууган хүүхэд)" class="text-stone-800">Том салбар (Ууган хүүхэд)</option>
+                            <option value="Дундын салбар (Дэд хүүхэд)" class="text-stone-800">Дундын салбар (Дэд хүүхэд)</option>
+                            <option value="Отгон салбар (Бага хүүхэд)" class="text-stone-800">Отгон салбар (Бага хүүхэд)</option>
+                            <option value="Бусад ураг төрөл" class="text-stone-800">Бусад ураг төрөл</option>
+                        </select>
+                    </div>
+
+                    <!-- Гэр бүлийн зураг оруулах -->
+                    <div>
+                        <label class="block text-[10px] text-wedding-goldLight/70 tracking-wider mb-1 uppercase font-medium">Гэр бүлийн зураг (заавал биш)</label>
+                        <input type="file" id="rsvpPhoto" accept="image/*" class="w-full text-[11px] text-stone-300 file:mr-3 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-[10px] file:font-semibold file:bg-wedding-gold file:text-white hover:file:bg-wedding-goldLight hover:file:text-wedding-navy transition cursor-pointer">
+                    </div>
+
                     <div class="grid grid-cols-2 gap-4">
                         <div>
                             <label class="block text-[10px] text-wedding-goldLight/70 tracking-wider mb-1 uppercase font-medium">Ирэх эсэх</label>
@@ -264,7 +311,7 @@
                 <div class="text-[9px] tracking-[4px] text-stone-400 font-cinzel uppercase mb-1">Сэтгэгдэл</div>
                 <h3 class="font-playfair text-2xl text-wedding-navy font-semibold italic">Зочдын сэтгэгдэл</h3>
             </div>
-            <div id="wishesContainer" class="space-y-3 max-h-[350px] overflow-y-auto px-1 pr-2 pb-4">
+            <div id="wishesContainer" class="space-y-3 max-h-[450px] overflow-y-auto px-1 pr-2 pb-4">
                 <div class="bg-white/80 border border-wedding-gold/20 p-5 rounded-2xl text-center shadow-sm">
                     <p class="text-xs text-stone-400 italic">Одоогоор сэтгэгдэл бичигдээгүй байна.<br>Та анхны сэтгэгдлийг үлдээнэ үү.</p>
                 </div>
@@ -277,7 +324,6 @@
             <div class="font-playfair font-bold text-xl text-wedding-navy mb-2 uppercase tracking-widest">Баярлалаа</div>
             <div class="text-sm text-wedding-charcoal/70 tracking-widest uppercase mt-2">Зохион байгуулах зөвлөл</div>
             
-            <!-- Админ нэвтрэх товч -->
             <button id="btn-admin-show" class="mt-12 text-[9px] text-stone-400 hover:text-wedding-gold tracking-widest uppercase transition flex items-center justify-center gap-1 mx-auto">
                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 16 16"><path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/></svg> 
                 Удирдлага
@@ -314,7 +360,7 @@
                 <button id="btn-admin-close" class="px-5 py-2.5 bg-red-50 hover:bg-red-100 text-red-600 font-semibold text-[10px] uppercase tracking-widest rounded-xl transition border border-red-100">Гарах</button>
             </div>
 
-            <!-- ШИНЭ ХЭСЭГ: Хөтөлбөр удирдах (Admin) -->
+            <!-- Хөтөлбөр удирдах (Admin) -->
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-stone-200 mb-6">
                 <h3 class="text-sm font-bold text-wedding-navy mb-4 flex items-center gap-2">
                     <span class="text-wedding-gold">🗓️</span> Хөтөлбөр удирдах
@@ -339,7 +385,7 @@
                 <div class="mt-6">
                     <h4 class="text-[11px] font-bold text-stone-400 uppercase tracking-widest mb-3">Бүртгэгдсэн хөтөлбөрүүд</h4>
                     <div id="adminScheduleList" class="flex flex-col gap-2 max-h-60 overflow-y-auto">
-                        <p class="text-xs text-stone-400 italic px-2">Ачаалж байна...</p>
+                        <p class="text-xs text-stone-400 italic px-2">Хөтөлбөр байхгүй байна</p>
                     </div>
                 </div>
             </div>
@@ -384,7 +430,8 @@
                     <table class="w-full text-left text-sm text-stone-600">
                         <thead class="bg-stone-50 text-stone-400 font-semibold uppercase tracking-wider text-[10px]">
                             <tr>
-                                <th class="px-6 py-4">Зочны нэр</th>
+                                <th class="px-6 py-4">Зураг & Нэр</th>
+                                <th class="px-6 py-4">Салбар</th>
                                 <th class="px-6 py-4">Төлөв</th>
                                 <th class="px-6 py-4 text-center">Тоо</th>
                                 <th class="px-6 py-4">Сэтгэгдэл</th>
@@ -392,7 +439,7 @@
                             </tr>
                         </thead>
                         <tbody id="adminTableBody" class="divide-y divide-stone-100">
-                            <tr><td colspan="5" class="px-6 py-10 text-center text-stone-400 italic">Одоогоор бүртгэл байхгүй байна...</td></tr>
+                            <tr><td colspan="6" class="px-6 py-10 text-center text-stone-400 italic">Одоогоор бүртгэл байхгүй байна...</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -400,7 +447,7 @@
         </div>
     </div>
 
-    <!-- Ажилттай мэдээлэх Modal -->
+    <!-- Alert Modal -->
     <div id="alertModal" class="fixed inset-0 z-[80] bg-wedding-navy/80 backdrop-blur-sm hidden items-center justify-center px-6">
         <div class="bg-white border border-wedding-gold/50 p-8 rounded-3xl max-w-sm w-full text-center shadow-2xl relative animate-fade-in">
             <div class="text-wedding-gold text-4xl mb-4" id="modalIcon">✨</div>
@@ -415,7 +462,8 @@
         import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
         import { getFirestore, collection, addDoc, onSnapshot, serverTimestamp, doc, updateDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-        const appId = 'reunion-inv-template-01'; 
+        // Шинэ AppID олгосноор өмнөх бүх өгөгдөл цэвэрхэн, хоосон болж эхэлнэ
+        const appId = 'reunion-inv-damantsagaan-2026'; 
         
         const firebaseConfig = {
             apiKey: "AIzaSyBp50ivB1Fy3stRI-oKtYs8bD4Xo3yZB1M",
@@ -446,7 +494,7 @@
                     if (user) { 
                         currentUser = user; 
                         listenToWishes(); 
-                        listenToSchedule(); // Хөтөлбөр сонсох
+                        listenToSchedule();
                     }
                 });
             } catch(e) {
@@ -457,9 +505,7 @@
             renderLocalWishes();
         }
 
-        // Цаг тоологчийн логик
         function initCountdown() {
-            // Ургийн баяр болох огноо: 2026 оны 8 сарын 1, 09:00
             const weddingDate = new Date("Aug 1, 2026 09:00:00").getTime();
 
             const timer = setInterval(function() {
@@ -496,7 +542,7 @@
                 renderPublicSchedule();
                 renderAdminSchedule();
             }, (error) => {
-                console.error("Хөтөлбөр татахад алдаа гарлаа: ", error);
+                console.error("Хөтөлбөр татахад алдаа: ", error);
             });
         }
 
@@ -506,7 +552,7 @@
             const day = d.getDate();
             const hr = d.getHours().toString().padStart(2, '0');
             const min = d.getMinutes().toString().padStart(2, '0');
-            return `${m} сарын ${day}-ны өдрийн ${hr}:${min}`;
+            return `${m} сарын ${day}-ны ${hr}:${min}`;
         }
 
         function renderPublicSchedule() {
@@ -523,9 +569,7 @@
                 const isLast = index === schedules.length - 1;
                 return `
                 <div class="relative pl-6 py-2">
-                    <!-- Line -->
                     ${!isLast ? `<div class="absolute left-[11px] top-8 bottom-[-16px] w-[2px] bg-wedding-gold/30"></div>` : ''}
-                    <!-- Dot -->
                     <div class="absolute left-2 top-4 w-3 h-3 rounded-full bg-wedding-gold border-2 border-white shadow-sm z-10"></div>
                     
                     <div class="bg-white/90 p-4 rounded-xl border border-stone-200/50 shadow-sm ml-2">
@@ -550,7 +594,7 @@
                 <div class="flex justify-between items-center p-3 bg-white border border-stone-200 rounded-xl shadow-sm">
                     <div>
                         <p class="text-xs font-bold text-wedding-navy mb-0.5">${escapeHTML(s.title)}</p>
-                        <p class="text-[9px] text-stone-500">${new Date(s.startMs).toLocaleString('mn-MN')} <br> ${new Date(s.endMs).toLocaleString('mn-MN')} хүртэл</p>
+                        <p class="text-[9px] text-stone-500">${new Date(s.startMs).toLocaleString('mn-MN')} - ${new Date(s.endMs).toLocaleString('mn-MN')}</p>
                     </div>
                     <div class="flex gap-2">
                         <button onclick="window.editSchedule('${s.id}')" class="px-2 py-1 bg-blue-50 text-blue-600 rounded text-[10px] font-bold uppercase">Засах</button>
@@ -581,18 +625,6 @@
                 return;
             }
 
-            // Цагийн давхцал шалгах (Max(start1, start2) < Min(end1, end2))
-            const isOverlap = schedules.some(s => {
-                if (window.editingScheduleId && s.id === window.editingScheduleId) return false;
-                return Math.max(startMs, s.startMs) < Math.min(endMs, s.endMs);
-            });
-
-            if (isOverlap) {
-                errEl.innerText = "Анхаар: Энэ цагт өөр хөтөлбөр давхардаж байна!";
-                errEl.classList.remove('hidden');
-                return;
-            }
-
             errEl.classList.add('hidden');
             const data = { start, end, startMs, endMs, title };
 
@@ -610,8 +642,6 @@
                 document.getElementById('schTitle').value = '';
             } catch(e) {
                 console.error("Алдаа гарлаа", e);
-                errEl.innerText = "Хадгалахад алдаа гарлаа.";
-                errEl.classList.remove('hidden');
             }
         });
 
@@ -631,40 +661,26 @@
             document.getElementById('btn-add-schedule').innerText = "ӨӨРЧЛӨЛТИЙГ ХАДГАЛАХ";
             document.getElementById('schStart').focus();
         };
-        // --- ХӨТӨЛБӨРИЙН ЛОГИК ДУУСАВ ---
 
-
-        // Данс хуулах логик
+        // Данс хуулах
         window.copyAccount = function(elementId, btnElement) {
             const textToCopy = document.getElementById(elementId).innerText;
             if (navigator.clipboard && window.isSecureContext) {
-                navigator.clipboard.writeText(textToCopy).then(() => showCopiedState(btnElement))
-                .catch(err => fallbackCopyTextToClipboard(textToCopy, btnElement));
+                navigator.clipboard.writeText(textToCopy).then(() => showCopiedState(btnElement));
             } else {
-                fallbackCopyTextToClipboard(textToCopy, btnElement);
+                var textArea = document.createElement("textarea");
+                textArea.value = textToCopy;
+                document.body.appendChild(textArea);
+                textArea.select();
+                try { document.execCommand('copy'); showCopiedState(btnElement); } catch (err) {}
+                document.body.removeChild(textArea);
             }
         };
-
-        function fallbackCopyTextToClipboard(text, btnElement) {
-            var textArea = document.createElement("textarea");
-            textArea.value = text;
-            textArea.style.top = "0"; textArea.style.left = "0"; textArea.style.position = "fixed";
-            document.body.appendChild(textArea);
-            textArea.focus(); textArea.select();
-            try { document.execCommand('copy') ? showCopiedState(btnElement) : null; } catch (err) {}
-            document.body.removeChild(textArea);
-        }
 
         function showCopiedState(btn) {
             const originalHTML = btn.innerHTML;
             btn.innerHTML = `<span class="text-[9px] font-bold uppercase tracking-wider text-emerald-600">Хуулагдлаа ✓</span>`;
-            btn.classList.add('bg-emerald-50', 'border-emerald-200');
-            btn.classList.remove('bg-wedding-blush', 'text-wedding-goldDark');
-            setTimeout(() => {
-                btn.innerHTML = originalHTML;
-                btn.classList.remove('bg-emerald-50', 'border-emerald-200');
-                btn.classList.add('bg-wedding-blush', 'text-wedding-goldDark');
-            }, 2000);
+            setTimeout(() => { btn.innerHTML = originalHTML; }, 2000);
         }
 
         // Сэтгэгдэл татах
@@ -706,18 +722,21 @@
                     </div>`;
             } else {
                 container.innerHTML = wishes.map(w => `
-                    <div class="bg-white border border-stone-200/60 p-5 rounded-2xl shadow-sm relative overflow-hidden">
+                    <div class="bg-white border border-stone-200/60 p-4 rounded-2xl shadow-sm relative overflow-hidden flex flex-col gap-2">
                         <div class="absolute left-0 top-0 bottom-0 w-1 ${w.status === 'yes' ? 'bg-wedding-gold' : 'bg-stone-300'}"></div>
-                        <div class="flex justify-between items-start mb-2 pl-2">
-                            <div>
-                                <span class="font-bold text-sm text-wedding-navy font-playfair">${escapeHTML(w.name)}</span>
-                                <span class="block text-[9px] text-stone-400 uppercase mt-0.5">${formatDate(w.createdAt)}</span>
+                        <div class="flex items-center justify-between pl-2">
+                            <div class="flex items-center gap-3">
+                                ${w.photo ? `<img src="${w.photo}" class="w-10 h-10 object-cover rounded-full border border-wedding-gold shadow-sm">` : `<div class="w-10 h-10 bg-wedding-blush rounded-full flex items-center justify-center text-wedding-gold font-bold text-sm">👤</div>`}
+                                <div>
+                                    <span class="font-bold text-sm text-wedding-navy font-playfair block">${escapeHTML(w.name)}</span>
+                                    <span class="text-[9px] text-wedding-goldDark font-semibold uppercase">${escapeHTML(w.branch || 'Ургийн салбар')}</span>
+                                </div>
                             </div>
                             <span class="text-[9px] font-bold px-2 py-1 rounded-full uppercase tracking-wider ${w.status === 'yes' ? 'bg-wedding-gold/10 text-wedding-goldDark border border-wedding-gold/20' : 'bg-stone-100 text-stone-500'}">
                                 ${w.status === 'yes' ? 'Очно' : 'Амжихгүй'}
                             </span>
                         </div>
-                        <p class="text-[13px] text-stone-600 text-left pl-2 leading-relaxed italic mt-3">"${escapeHTML(w.message || 'Сайхан баярлаарай!')}"</p>
+                        <p class="text-[12px] text-stone-600 text-left pl-2 leading-relaxed italic mt-1">"${escapeHTML(w.message || 'Сайхан баярлаарай!')}"</p>
                     </div>
                 `).join('');
             }
@@ -731,7 +750,7 @@
             document.getElementById("totalEntriesCount").innerText = `Нийт: ${wishes.length}`;
 
             if (wishes.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="5" class="px-6 py-10 text-center text-stone-400 italic">Одоогоор бүртгэл байхгүй байна...</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="6" class="px-6 py-10 text-center text-stone-400 italic">Одоогоор бүртгэл байхгүй байна...</td></tr>`;
             } else {
                 tbody.innerHTML = wishes.map(w => {
                     if (w.status === 'yes') { att++; tot += parseInt(w.count || 1); } 
@@ -739,13 +758,17 @@
                     
                     return `
                         <tr class="hover:bg-stone-50 transition">
-                            <td class="px-6 py-4 font-semibold text-wedding-navy">${escapeHTML(w.name)}</td>
+                            <td class="px-6 py-4 flex items-center gap-3 font-semibold text-wedding-navy">
+                                ${w.photo ? `<img src="${w.photo}" class="w-8 h-8 rounded-full object-cover border border-wedding-gold">` : `<div class="w-8 h-8 rounded-full bg-stone-100 flex items-center justify-center text-xs">👤</div>`}
+                                ${escapeHTML(w.name)}
+                            </td>
+                            <td class="px-6 py-4 text-xs font-medium text-stone-600">${escapeHTML(w.branch || '—')}</td>
                             <td class="px-6 py-4">
                                 ${w.status === 'yes' ? 
                                 '<span class="inline-flex items-center gap-1 text-emerald-600 text-xs font-bold"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> Очно</span>' : 
                                 '<span class="inline-flex items-center gap-1 text-stone-400 text-xs font-bold"><span class="w-2 h-2 rounded-full bg-stone-300"></span> Амжихгүй</span>'}
                             </td>
-                            <td class="px-6 py-4 text-center font-bold text-wedding-navy text-lg">${w.status === 'yes' ? w.count : '-'}</td>
+                            <td class="px-6 py-4 text-center font-bold text-wedding-navy text-base">${w.status === 'yes' ? w.count : '-'}</td>
                             <td class="px-6 py-4 text-stone-500 max-w-xs truncate" title="${escapeHTML(w.message || '—')}">${escapeHTML(w.message || '—')}</td>
                             <td class="px-6 py-4 text-right text-xs text-stone-400">${formatDate(w.createdAt)}</td>
                         </tr>
@@ -753,23 +776,9 @@
                 }).join('');
             }
             
-            animateValue("statAttending", parseInt(document.getElementById("statAttending").innerText), att, 500);
-            animateValue("statTotalGuests", parseInt(document.getElementById("statTotalGuests").innerText), tot, 500);
+            document.getElementById("statAttending").innerText = att;
+            document.getElementById("statTotalGuests").innerText = tot;
             updateChart(att, noAtt);
-        }
-
-        function animateValue(id, start, end, duration) {
-            if (start === end) return;
-            let current = start;
-            let range = end - start;
-            let increment = end > start ? 1 : -1;
-            let stepTime = Math.abs(Math.floor(duration / range));
-            let obj = document.getElementById(id);
-            let timer = setInterval(function() {
-                current += increment;
-                obj.innerHTML = current;
-                if (current == end) clearInterval(timer);
-            }, stepTime);
         }
 
         function updateChart(att, noAtt) {
@@ -796,28 +805,20 @@
                     options: {
                         responsive: true,
                         maintainAspectRatio: false,
-                        plugins: {
-                            legend: { 
-                                position: 'bottom', 
-                                labels: { color: '#475569', font: { family: 'Montserrat', size: 10, weight: 'bold' }, usePointStyle: true, padding: 20 } 
-                            },
-                            tooltip: {
-                                callbacks: {
-                                    label: function(context) {
-                                        let label = context.label || '';
-                                        if (label) { label += ': '; }
-                                        let val = context.raw < 1 ? 0 : context.raw;
-                                        label += val + ' өрх';
-                                        return label;
-                                    }
-                                }
-                            }
-                        },
-                        cutout: '75%',
-                        animation: { animateScale: true }
+                        cutout: '75%'
                     }
                 });
             }
+        }
+
+        // Зураг хөрвүүлэх (Base64)
+        function getBase64(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = () => resolve(reader.result);
+                reader.onerror = error => reject(error);
+            });
         }
 
         document.getElementById("rsvpForm").addEventListener('submit', async e => {
@@ -825,17 +826,27 @@
             const btnSubmit = e.target.querySelector('button[type="submit"]');
             
             const name = document.getElementById("rsvpName").value.trim();
+            const branch = document.getElementById("rsvpBranch").value;
             const status = document.getElementById("rsvpStatus").value;
             const count = status === 'yes' ? document.getElementById("rsvpCount").value : 0;
             const message = document.getElementById("rsvpMessage").value.trim();
+            const photoFile = document.getElementById("rsvpPhoto").files[0];
+            
             if (!name) return;
 
-            const originalBtnText = btnSubmit.innerHTML;
             btnSubmit.innerHTML = 'ИЛГЭЭЖ БАЙНА...';
             btnSubmit.disabled = true;
-            btnSubmit.classList.add('opacity-70');
 
-            const newWish = { name, status, count, message, createdAt: null };
+            let photoBase64 = null;
+            if (photoFile) {
+                try {
+                    photoBase64 = await getBase64(photoFile);
+                } catch(e) {
+                    console.error("Зураг уншихад алдаа гарлаа", e);
+                }
+            }
+
+            const newWish = { name, branch, status, count, message, photo: photoBase64, createdAt: null };
 
             if (isFirebaseConfigured && db && currentUser) {
                 try {
@@ -852,19 +863,9 @@
             }
 
             document.getElementById("rsvpForm").reset();
-            document.getElementById("guestCountContainer").style.opacity = '1';
-            document.getElementById("guestCountContainer").style.pointerEvents = 'auto';
-
-            btnSubmit.innerHTML = originalBtnText;
+            btnSubmit.innerHTML = 'ХАРИУ ИЛГЭЭХ';
             btnSubmit.disabled = false;
-            btnSubmit.classList.remove('opacity-70');
 
-            document.getElementById("modalIcon").innerHTML = status === 'yes' ? "✨" : "🤍";
-            document.getElementById("modalTitle").innerHTML = status === 'yes' ? "Тэсэн ядан хүлээж байя" : "Хүлээж авлаа";
-            document.getElementById("modalBody").innerHTML = status === 'yes' ? 
-                `Хүндэт <b class="text-wedding-navy">${escapeHTML(name)}</b>, таны бүртгэл амжилттай хийгдлээ. Баярын өдөр уулзацгаая!` : 
-                `Хүндэт <b class="text-wedding-navy">${escapeHTML(name)}</b>, сэтгэгдэл үлдээсэнд баярлалаа.`;
-            
             document.getElementById("alertModal").style.display = "flex";
         });
 
@@ -882,19 +883,11 @@
             setTimeout(() => {
                 document.getElementById("doorOverlay").classList.remove("active");
                 document.getElementById("mainContent").classList.add("active");
-                
                 initCountdown();
-                
-                const music = document.getElementById("bgMusic");
-                music.play().then(() => {
-                    document.getElementById("btn-music").classList.remove("hidden");
-                }).catch(() => {
-                    document.getElementById("btn-music").classList.remove("hidden");
-                    document.getElementById("musicOn").classList.add("hidden");
-                    document.getElementById("musicOff").classList.remove("hidden");
-                });
-                
                 initStars();
+                const music = document.getElementById("bgMusic");
+                music.play().catch(() => {});
+                document.getElementById("btn-music").classList.remove("hidden");
             }, 800);
         };
 
@@ -904,22 +897,19 @@
                 music.play(); 
                 document.getElementById("musicOn").classList.remove("hidden"); 
                 document.getElementById("musicOff").classList.add("hidden"); 
-                document.getElementById("btn-music").classList.remove("grayscale");
             } else { 
                 music.pause(); 
                 document.getElementById("musicOn").classList.add("hidden"); 
                 document.getElementById("musicOff").classList.remove("hidden"); 
-                document.getElementById("btn-music").classList.add("grayscale");
             }
         };
 
         document.getElementById("rsvpStatus").onchange = e => {
             const c = document.getElementById("guestCountContainer");
             if (e.target.value === 'yes') { 
-                c.style.opacity = '1'; c.style.pointerEvents = 'auto'; c.style.transform = 'scale(1)';
+                c.style.opacity = '1'; c.style.pointerEvents = 'auto'; 
             } else { 
-                c.style.opacity = '0.3'; c.style.pointerEvents = 'none'; c.style.transform = 'scale(0.98)';
-                c.style.transition = 'all 0.3s ease';
+                c.style.opacity = '0.3'; c.style.pointerEvents = 'none'; 
             }
         };
 
@@ -944,14 +934,11 @@
                 document.getElementById("adminDashboard").classList.add("active");
             } else {
                 document.getElementById("pinError").classList.remove("hidden");
-                const pinInput = document.getElementById("adminPin");
-                pinInput.classList.add("translate-x-1");
-                setTimeout(() => pinInput.classList.replace("translate-x-1", "-translate-x-1"), 50);
-                setTimeout(() => pinInput.classList.replace("-translate-x-1", "translate-x-0"), 100);
             }
         };
 
         function escapeHTML(str) { 
+            if(!str) return '';
             return str.replace(/[&<>'"]/g, t => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[t] || t)); 
         }
 
@@ -989,7 +976,7 @@
                 if (s.alpha > 1 || s.alpha < 0) s.speed = -s.speed;
                 ctx.save(); 
                 ctx.globalAlpha = Math.abs(s.alpha); 
-                ctx.fillStyle = "#c97a3a";
+                ctx.fillStyle = "#c97a3a"; 
                 ctx.beginPath(); 
                 ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2); 
                 ctx.fill(); 
